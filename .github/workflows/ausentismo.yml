@@ -2,7 +2,7 @@ name: Ausentismo Bot
 
 on:
   schedule:
-    - cron: '0 12,18 * * 1-5'  # ajustado a horario ARG (GitHub usa UTC)
+    - cron: '0 12,18 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Clonar repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Instalar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
