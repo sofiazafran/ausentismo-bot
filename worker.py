@@ -7,7 +7,9 @@ TOLERANCIA_MIN = 60
 
 # leer archivos
 fichadas = pd.read_csv("fichadas.csv")
+fichadas.columns = fichadas.columns.str.strip()
 calendario = pd.read_csv("calendario.csv")
+calendario.columns = calendario.columns.str.strip()
 
 ahora = datetime.now()
 hoy_str = ahora.strftime("%-d/%-m/%Y")
